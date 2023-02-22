@@ -46,3 +46,42 @@ The full documentation for PWA Kit and Managed Runtime is hosted on the [Salesfo
 -   [Routing](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/routing.html)
 -   [Phased Headless Rollouts](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/phased-headless-rollouts.html)
 -   [Launch Your Storefront](https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/launching-your-storefront.html)
+
+
+# FLOWS
+
+## Purchases
+
+- Home
+- Click product img
+  - Product ITO page
+  - Choose product specs
+  - Add to Cart button
+- After this you'll be prompted to a modal where you can see the cart total.
+- Then in checkout you are asked to log in or sign in as a guest.
+- After this you are asked your shipping address.
+- Asks what kind of shipping do you preferr.
+- Payment options.
+  - Review order
+  - Confirm purchase
+
+## PDP
+
+- /product/:productId This route is accesed each time one item ii's clicked.
+- ProductDetail props: - Product - Categoy - IsLoading
+  data is obtained via getProps using a call to the commerce Api configured in the commerce-api folder, makes the call api.shopperProduct.getProduct(params) (gets product ID from url params)
+- useEffect, einstein.sendViewProduct(), Tells the Einstein engine when a user views a product.
+-
+- Finally it renders everything in ProductView component.
+- Also uses some product info to render the Recommended Products component.
+- Variant info for choosing product variants
+- AddToCart and AddToWishlist functions in buttons
+
+## PLP
+
+- /category/:categoryId || /search
+- ProductList prop data is obtained via getProps using a call to the commerce Api configured in the commerce-api folder, makes the call api.shopperProducts.getCategory(params) to get the category prop, and the call api.shopperSearch.productSearch(params) to get the productSerchResult prop filled(array of products) (gets category ID from url params)
+- Variant info for choosing product variants
+- Then with a productSearchResult.map to render every item with the ProductTile component
+- productSearchResult()length for pagination.
+- Clicking item goes to PDP.

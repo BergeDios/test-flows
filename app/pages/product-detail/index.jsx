@@ -324,7 +324,6 @@ ProductDetail.getProps = async ({res, params, location, api}) => {
             allImages: true
         }
     })
-
     if (product?.primaryCategoryId) {
         category = await api.shopperProducts.getCategory({
             parameters: {id: product?.primaryCategoryId, levels: 1}

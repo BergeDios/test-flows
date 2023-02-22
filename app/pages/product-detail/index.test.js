@@ -20,6 +20,8 @@ jest.mock('../../commerce-api/einstein')
 
 const MockedComponent = () => {
     const product = productsResponse.data[0]
+    console.log('inside mocked component')
+    console.log(product)
 
     return (
         <Switch>
