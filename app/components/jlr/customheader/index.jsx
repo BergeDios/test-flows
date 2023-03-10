@@ -24,7 +24,7 @@ const Customheader = (props) => {
             <HStack ml="auto">
                 <SearchIcon mr={10} w={4} />
                 <div styles={{marginRight: '5', width: '4'}}>
-                    <FaMapMarkerAlt />
+                    <FaMapMarkerAlt mr={5} />
                 </div>
             </HStack>
         </NavBarContainer>
