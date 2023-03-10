@@ -29,6 +29,7 @@ import CheckoutFooter from '../../pages/checkout/partials/checkout-footer'
 import DrawerMenu from '../drawer-menu'
 import ListMenu from '../list-menu'
 import {HideOnDesktop, HideOnMobile} from '../responsive'
+import Customheader from '../jlr/customheader'
 
 // Hooks
 import useShopper from '../../commerce-api/hooks/useShopper'
@@ -205,7 +206,7 @@ const App = (props) => {
                             <SkipNavLink zIndex="skipLink">Skip to Content</SkipNavLink>
 
                             <Box {...styles.headerWrapper}>
-                                {!isCheckout ? (
+                                {/* {!isCheckout ? (
                                     <Header
                                         onMenuClick={onOpen}
                                         onLogoClick={onLogoClick}
@@ -228,7 +229,8 @@ const App = (props) => {
                                     </Header>
                                 ) : (
                                     <CheckoutHeader />
-                                )}
+                                )} */}
+                                {!isCheckout ? <Customheader /> : <CheckoutHeader />}
                             </Box>
 
                             {!isOnline && <OfflineBanner />}
