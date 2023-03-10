@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 const myGrid = (props) => {
     return (
         <Container>
-            <SimpleGrid spacing={1} columns={[1, 2, 3, 3]} pb={20}>
+            <SimpleGrid spacing={10} columns={[1, 2, 3, 3]} pb={20}>
                 {props.cards.map((card, index) => {
                     const linksmapped = card.links.map((link) => {
                         return {

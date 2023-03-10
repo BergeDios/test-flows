@@ -17,14 +17,7 @@ const jlr = () => {
             {/* <Carousel /> */}
 
             {/* <CustomJLRNavSection /> */}
-            <Container>
-                {/* <Heading fontSize={25} fontFamily="AvenirNext, arial, helvetica, sans-serif" m={5}>
-                    OUR FAMILIES
-                </Heading> */}
-                {/* <Grid cards={families} /> */}
-                {/* <Heading fontSize={25} fontFamily="AvenirNext, arial, helvetica, sans-serif" m={5}>
-                    OUR VEHICLES
-                </Heading> */}
+            <Container centerContent>
                 <Grid cards={vehicles} />
                 <Heading fontSize={25} fontFamily="AvenirNext, arial, helvetica, sans-serif" m={5}>
                     FIND OUT MORE

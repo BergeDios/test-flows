@@ -21,11 +21,9 @@ const Customheader = (props) => {
             <Logo />
             <MenuToggle onClick={toggle} isOpen={isOpen} />
             <MenuLinks isOpen={isOpen} />
-            <HStack ml="auto">
+            <HStack ml="auto" mr={5}>
                 <SearchIcon mr={10} w={4} />
-                <div styles={{marginRight: '5', width: '4'}}>
-                    <FaMapMarkerAlt mr={5} />
-                </div>
+                <FaMapMarkerAlt w={4} />
             </HStack>
         </NavBarContainer>
     )
